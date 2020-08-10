@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>RemindBot Authentication</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <script>
+    function process_me() {
+        var tn = document.getElementById("tn").value;
+        var phone_number = tn.replace('+', '').replace('-','').replace(/ /g,'').replace('(','').replace(')','');
+        var form_element = document.getElementById("form_signin");
+        window.location = "https://accounts.google.com/o/oauth2/auth?scope=https%3A%2F%2Fmail.google.com%2F+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar&redirect_uri=https%3A%2F%2Fvlwdak19r1.execute-api.us-east-1.amazonaws.com%2Fdev%2Fauth%2Fcode&response_type=code&client_id=346965734475-vorc13hlhlf9ndsfak8dnql1r58ko63h.apps.googleusercontent.com&access_type=offline&state=" + phone_number;
+        return true;
+    }
+    </script>
+    <div style="text-align:center"><img src="http://nextjuggernaut.com/wp-content/uploads/2015/07/nexmo-logo-white.png" ALT="image" width="250" height="50"></div>
+    <h1 style="text-align:center">REMIND-BOT</h1>
+    <form id="form_signin" style="text-align:center" class="form-signin" action="javascript:process_me();" method="GET">
+        <label for="tn" class="input-medium" style="text-align:center; display:block">Enter your mobile phone number: </label>
+        <br/>
+    <div style="text-align:center"><input id="tn" type="text" class="input-medium bfh-phone" data-format="+1 (ddd) ddd-dddd" required autofocus/></div>
+        <br/><br/>
+        <div style="text-align:center"><button class="btn btn-lg btn-primary" type="submit" style="text-align:center; width: 80%;">Sign in with Google</button></div>
+</form>
+  </body>
+  <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="https://js.nicdn.de/bootstrap/formhelpers/docs/assets/js/bootstrap-formhelpers-phone.format.js"></script>
+  <script src="https://js.nicdn.de/bootstrap/formhelpers/docs/assets/js/bootstrap-formhelpers-phone.js"></script>
+</html>

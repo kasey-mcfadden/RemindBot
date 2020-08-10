@@ -1,0 +1,7 @@
+nexmo==1.5.0
+google-api-python-client==1.6.2
+httplib2==0.10.3
+pytz==2017.2
+requests==2.18.3
+watson-developer-cloud==0.26.1
+PyMySQL==0.7.11
