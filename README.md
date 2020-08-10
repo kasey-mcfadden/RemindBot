@@ -1,6 +1,8 @@
 # RemindBot
+
 ![alt text](https://github.com/kasey-mcfadden/RemindBot/blob/master/RemindBot.jpg "RemindBot")
-_An SMS-based reminder chatbot Nexmo, Google Calendars & Gmail, and IBM Watson._
+
+_An SMS-based reminder chatbot using Nexmo, Google Calendars & Gmail, and IBM Watson._
 
 August 25, 2017
 
